@@ -6,36 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mike's Cereal Shack | Contact Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="./restaurantStyles.css" />
+    <style>
+        #contact-main {
+            text-align: center;
+            max-width: 90%;
+            margin: auto;
+        }
+        #contact-main input {
+            border: 1px inset black; 
+        }
+        /* #contact-main input, select, textarea, fieldset {
+            max-width: 50%;
+        } */
+        .bold {
+            font-weight: bold;
+        }
+        label {
+            margin-right: 1em;
+        }
+        fieldset {
+            border: 0;
+            margin: auto;
+            max-width:80%;
+        }
+        fieldset legend {
+            float:left;
+            
+        }
+        input[type="submit"] {
+            padding: 6px;
+            background: lightgray;
+            border-radius: 6px;
+        }
+    </style>
 </head>
 
 <body>
     <main>
         <header>
             <h2>Contact</h2>
-            <div>circle options go here</div>
+            <div class="header-circle blue-border"></div>
+            <div class="header-circle black-border"></div>
+            <div class="header-circle black-border"></div>
             <hr />
             <h1>Mike's Cereal Shack</h1>
+            <hr />
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <hr />
         </header>
-        <hr />
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./menu.html">Menu</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        <hr />
-        <section>
+        <section id="contact-main">
             <!-- start of form -->
             <form action="submit.html" method="POST">
                 <!-- name -->
-                <label for="name">Name: </label>
-                <input type="text" id="name" name="name">
+                <label for="name" class="bold">Name: </label>
+                <input type="text" id="name" name="name" required>
                 <br />
                 <!-- email -->
-                <label for="email">Email: </label>
-                <input type="email" id="email" name="email">
+                <label for="email" class="bold">Email: </label>
+                <input type="email" id="email" name="email" required>
                 <br />
                 <!-- phone -->
                 <label for="phone">Phone: </label>
@@ -51,43 +87,43 @@
                 </select>
                 <br />
                 <!-- additional info textarea-->
-                <label for="add-info">Additional Information:</label>
-                <textarea id="add-info" name="add-info"></textarea>
+                <label for="add-info" class="bold">Additional Information:</label>
+                <textarea id="add-info" name="add-info" required rows="6" cols="30"></textarea>
                 <!-- been to restaurant radio -->
                 <fieldset>
                     <legend>Have you been to the restaurant?</legend>
-                    <label for="no">No</label>
                     <input type="radio" value="no" name="restaurant" id="no">
-                    <label for="yes">Yes</label>
+                    <label for="no">No</label>
                     <input type="radio" value="yes" name="restaurant" id="yes">
+                    <label for="yes">Yes</label>
                 </fieldset>
                 <br />
                 <!-- days to contact check boxes -->
                 <fieldset>
                     <legend>Best days to contact you:</legend>
                     <!-- Monday -->
-                    <label for="m">M</label>
                     <input type="checkbox" value="m" name="days" id="m">
+                    <label for="m">M</label>
                     <!-- Tuesday -->
-                    <label for="t">T</label>
                     <input type="checkbox" value="t" name="days" id="t">
-                    <!-- Wednesday -->
-                    <label for="w">W</label>
+                    <label for="t">T</label>
+                    <!-- Wednesday --> 
                     <input type="checkbox" value="w" name="days" id="w">
+                    <label for="w">W</label>
                     <!-- Thursday -->
-                    <label for="th">Th</label>
                     <input type="checkbox" value="th" name="days" id="th">
+                    <label for="th">Th</label>
                     <!-- Friday -->
-                    <label for="f">F</label>
                     <input type="checkbox" value="f" name="days" id="f">
+                    <label for="f">F</label>
                 </fieldset>
                 <br />
                 <!-- submit btn-->
                 <input type="submit" value="Send Request" name="submit">
             </form>
         </section>
-        <hr />
         <footer>
+            <hr />
             <address>246 Road Street Drive, Town in Country, MN 55642</address>
             <p>+1 (507) 246-1224</p>
         </footer>

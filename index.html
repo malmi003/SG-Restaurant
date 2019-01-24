@@ -6,39 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mike's Cereal Shack | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="./restaurantStyles.css" />
 </head>
 
 <body>
     <main>
         <header>
-            <h2>Home</h2>
-            <div>circle options go here</div>
+            <h2>Home Page</h2>
+            <div class="header-circle blue-border"></div>
+            <div class="header-circle black-border"></div>
+            <div class="header-circle black-border"></div>
             <hr />
             <h1>Mike's Cereal Shack</h1>
+            <hr />
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <hr />
         </header>
-        <hr />
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./menu.html">Menu</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        <hr />
-        <section>
-            <img src="images/home-image.jpg" alt="400x140 placeholder">
+        <section id="home-main">
+            <!-- all home page image styles must be applied inline -->
+            <img src="images/home-image.jpg" alt="400x140 placeholder" style="display:block; margin:auto; border-radius:6px; max-width: 100%;">
             <h3>Restaurant Description</h3>
-            <p>Lorem ipsum dolor amet duis tofu literally, air plant sustainable quis four dollar toast tumeric
+            <p>A place to get all your cereal fixings. We offer everything from grainy classics to yogurty nonsense. Lorem ipsum dolor amet duis tofu literally, air plant sustainable quis four dollar toast tumeric
                 flexitarian raclette. Craft beer before they sold out tilde, synth excepteur flannel pug palo santo
                 woke taxidermy dolore vinyl man braid YOLO. Cornhole eiusmod letterpress, ennui man braid craft beer
-                authentic trust fund leggings tousled semiotics next level tumeric godard. Subway tile jianbing
-                intelligentsia mumblecore helvetica kale chips veniam. Occaecat sustainable elit, distillery
-                consectetur retro forage 3 wolf moon eiusmod single-origin coffee narwhal keytar cray enim. Ad godard
-                shaman, aute ethical adipisicing gluten-free pabst vexillologist cronut.</p>
+                authentic trust fund leggings tousled semiotics next level tumeric godard. Same yourself a dish and have a bowl with us.</p>
         </section>
-        <hr />
         <footer>
+            <hr />
             <address>246 Road Street Drive, Town in Country, MN 55642</address>
             <p>+1 (507) 246-1224</p>
         </footer>
