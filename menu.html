@@ -6,38 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mike's Cereal Shack | Menu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- my css -->
     <link rel="stylesheet" type="text/css" media="screen" href="./restaurantStyles.css" />
-
-    <style>
-        #menu-main {
-            overflow: auto;
-            background-color: lightgray;
-        }
-
-        #menu-main ul {
-            max-width: 90%;
-        }
-
-        #menu-main li {
-            list-style-type: none;
-            text-align: center;
-            float: left;
-            max-width: 33%;
-        }
-
-        th {
-            font-size: 1.17em;
-            padding-bottom: 1em;
-        }
-        tbody tr:hover {
-            background-color: #f5f5f5;
-        }
-    </style>
 </head>
 
 <body>
-    <main>
+    <main class="container">
         <header>
             <h2>Menu</h2>
             <div class="header-circle blue-border"></div>
@@ -47,58 +28,108 @@
             <h1>Mike's Cereal Shack</h1>
             <hr />
             <nav>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
+                <ul class="nav nav-tabs">
+                        <li class="nav-item"><a href="./index.html" class="nav-link"><i class="fas fa-home"></i></a></li>
+                    <li class="nav-item"><a href="./menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="./contact.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
-            <hr />
         </header>
         <section id="menu-main">
-            <ul>
-                <li>
-                    <h3>Fruit Loops</h3>
-                    <p>New take on a favorite</p>
-                    <p>Fresh strawberries, bananas and berries cut into loops, served with milk.</p>
-                    <p>$3.49</p>
+            <ul class="row mx-auto">
+                <li class="col-md-6 col-lg-4">
+                    <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Fruit Loops</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">New take on a favorite</h6>
+                            <p class="card-text text-left">
+                                Fresh strawberries, bananas and berries cut into loops, served with
+                                milk.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            $3.49
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <h3>Oats and boats</h3>
-                    <p>It rhymes!</p>
-                    <p>Classic oats served with blueberry boats. Add-ons available.</p>
-                    <p>$3.49</p>
+                <li class="col-md-6 col-lg-4">
+                    <div class="card text-center mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Oats and boats</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">It rhymes!</h6>
+                            <p class="card-text text-left">
+                                Classic oats served with blueberry boats. Add-ons available.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            $3.49
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <h3>Boats and Bluegrass</h3>
-                    <p>It kind of makes sense!</p>
-                    <p>A smoothy served in a bowl, this breakfast features our famous blueberry boats and real
-                        nutritional
-                        grass!</p>
-                    <p>$3.49</p>
+                <li class="col-md-6 col-lg-4">
+                    <div class="card text-center mx-auto" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Boats and Bluegrass</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">It kind of makes sense!</h6>
+                            <p class="card-text text-left">
+                                A smoothy served in a bowl, features our famous blueberry boats and real
+                                nutritional
+                                grass!
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            $3.49
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <h3>Cheerios</h3>
-                    <p>A happy bowl!</p>
-                    <p>The traditional cereal served in tight cylindrical towers waiting to be toppled.</p>
-                    <p>$3.49</p>
+                <li class="col-md-6 col-lg-4">
+                    <div class="card text-center mx-auto" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Cheerios</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">A happy bowl!</h6>
+                            <p class="card-text text-left">
+                                The traditional cereal served in tight cylindrical towers waiting to be toppled.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            $3.49
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <h3>Granola</h3>
-                    <p>It's good for you sometimes!</p>
-                    <p>Granola in a bowl with some milk. Eat with a spoon.</p>
-                    <p>$3.49</p>
+                <li class="col-md-6 col-lg-4">
+                    <div class="card text-center mx-auto" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Granola</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">It's good for you sometimes!</h6>
+                            <p class="card-text text-left">
+                                Granola in a bowl with some milk. Eat with a spoon.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            $3.49
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <h3>Al la carte</h3>
-                    <p>Your choice!</p>
-                    <p>Jam some grain in a bowl and call it breakfast.</p>
-                    <p>$3.49</p>
+                <li class="col-md-6 col-lg-4">
+                    <div class="card text-center mx-auto" style="max-width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Al la carte</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Your choice!</h6>
+                            <p class="card-text text-left">
+                                Jam some grain in a bowl and call it breakfast.
+                            </p>
+                        </div>
+                        <div class="card-footer text-muted">
+                            $3.49
+                        </div>
+                    </div>
                 </li>
             </ul>
-            <table>
+
+            <!-- beverages table -->
+            <table class="table table-striped">
                 <thead>
-                    <tr>
+                    <tr class=" text-center">
                         <th colspan="2">Beverages</th>
                     </tr>
                 </thead>
@@ -122,13 +153,19 @@
                 </tbody>
             </table>
         </section>
-        <footer>
+        <footer class="text-success">
             <hr />
             <address>246 Road Street Drive, Town in Country, MN 55642</address>
             <p>+1 (507) 246-1224</p>
         </footer>
         <hr />
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

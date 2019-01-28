@@ -6,12 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mike's Cereal Shack | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- my css -->
     <link rel="stylesheet" type="text/css" media="screen" href="./restaurantStyles.css" />
 </head>
 
 <body>
-    <main>
+    <main class="container">
         <header>
             <h2>Home Page</h2>
             <div class="header-circle blue-border"></div>
@@ -21,30 +28,56 @@
             <h1>Mike's Cereal Shack</h1>
             <hr />
             <nav>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
+                <ul class="nav nav-tabs">
+                        <li class="nav-item"><a href="./index.html" class="nav-link"><i class="fas fa-home"></i></a></li>
+                    <li class="nav-item"><a href="./menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="./contact.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
             <hr />
         </header>
-        <section id="home-main">
-            <!-- all home page image styles must be applied inline -->
-            <img src="images/home-image.jpg" alt="400x140 placeholder" style="display:block; margin:auto; border-radius:6px; max-width: 100%;">
-            <h3>Restaurant Description</h3>
-            <p>A place to get all your cereal fixings. We offer everything from grainy classics to yogurty nonsense. Lorem ipsum dolor amet duis tofu literally, air plant sustainable quis four dollar toast tumeric
-                flexitarian raclette. Craft beer before they sold out tilde, synth excepteur flannel pug palo santo
-                woke taxidermy dolore vinyl man braid YOLO. Cornhole eiusmod letterpress, ennui man braid craft beer
-                authentic trust fund leggings tousled semiotics next level tumeric godard. Same yourself a dish and have a bowl with us.</p>
+        <section id="home-main" class="text-center">
+            <!-- new location announcement -->
+            <div class="jumbotron">
+                <h3 class="display-5">We're opening up a new location!</h3>
+                <p class="lead">Come check out the new bowls.</p>
+                <hr class="my-4">
+                <p>Mention this ad to receive 15% off your first order!</p>
+            </div>
+            <div class="row">
+                <!-- restaurant description -->
+                <div class="col-md-5">
+                    <img src="./images/rawpixel-799536-unsplash.jpg" alt="Cereal photo by rawpixel on Unsplash" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-md-7">
+                    <h3 class="display-5 mb-4  mt-4 text-success">Who we are</h3>
+                    <p>A place to get all your cereal fixings. We offer everything from grainy classics to yogurty
+                        nonsense.
+                        Lorem ipsum dolor amet duis tofu literally, air plant sustainable quis four dollar toast
+                        tumeric
+                        flexitarian raclette. Craft beer before they sold out tilde, synth excepteur flannel pug palo
+                        santo
+                        woke taxidermy dolore vinyl man braid YOLO. Cornhole eiusmod letterpress, ennui man braid craft
+                        beer
+                        authentic trust fund leggings tousled semiotics next level tumeric godard. Same yourself a dish
+                        and
+                        have a bowl with us.</p>
+                </div>
+            </div>
         </section>
-        <footer>
+        <footer class="text-success">
             <hr />
             <address>246 Road Street Drive, Town in Country, MN 55642</address>
             <p>+1 (507) 246-1224</p>
         </footer>
         <hr />
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

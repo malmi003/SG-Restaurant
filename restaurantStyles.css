@@ -3,6 +3,16 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+.jumbotron {
+    /* Photo by Toa Heftiba on Unsplash */
+    background: linear-gradient(0deg,rgba(25, 10, 15, .65), rgba(25, 10, 15, .65)), url("./images/toa-heftiba-195458-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    color: whitesmoke;
+}
+.bold {
+    font-weight: bolder;
+}
 header h2 {
     float: left;
     margin-block-start: 0.5em;
@@ -56,10 +66,22 @@ footer address {
     font-style: normal;
 }
 
-/* ------------ home page ------------- */
-#home-main {
-    max-width: 60%;
-    margin: auto auto 4em auto;
-    padding: 2em;
-    background-color: beige;
+#menu-main li {
+    list-style-type: none;
+}
+#menu-main .card {
+    margin-top:1rem;
+}
+#menu-main .card-footer {
+background: rgba(40,167,69,.1)
+}
+#menu-main .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(40,167,69,.05);
+}
+#menu-main thead {
+    font-size: 1.25rem;
+}
+form {
+    background:rgba(40,167,69,.05);
+    padding: 10px;
 }

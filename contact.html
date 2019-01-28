@@ -6,45 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Mike's Cereal Shack | Contact Us</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <!-- my css -->
     <link rel="stylesheet" type="text/css" media="screen" href="./restaurantStyles.css" />
-    <style>
-        #contact-main {
-            text-align: center;
-            max-width: 90%;
-            margin: auto;
-        }
-        #contact-main input {
-            border: 1px inset black; 
-        }
-        /* #contact-main input, select, textarea, fieldset {
-            max-width: 50%;
-        } */
-        .bold {
-            font-weight: bold;
-        }
-        label {
-            margin-right: 1em;
-        }
-        fieldset {
-            border: 0;
-            margin: auto;
-            max-width:80%;
-        }
-        fieldset legend {
-            float:left;
-            
-        }
-        input[type="submit"] {
-            padding: 6px;
-            background: lightgray;
-            border-radius: 6px;
-        }
-    </style>
 </head>
 
 <body>
-    <main>
+    <main class="container">
         <header>
             <h2>Contact</h2>
             <div class="header-circle blue-border"></div>
@@ -54,81 +29,122 @@
             <h1>Mike's Cereal Shack</h1>
             <hr />
             <nav>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a href="./index.html" class="nav-link"><i class="fas fa-home"></i></a></li>
+                    <li class="nav-item"><a href="./menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="./contact.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
             <hr />
         </header>
         <section id="contact-main">
             <!-- start of form -->
-            <form action="submit.html" method="POST">
+            <form action="submit.html" method="POST" class="col-md-10 m-auto text-center">
                 <!-- name -->
-                <label for="name" class="bold">Name: </label>
-                <input type="text" id="name" name="name" required>
-                <br />
+                <div class="form-group row">
+                    <label for="name" class="bold col-sm-6 col-form-label text-sm-right">Name: </label>
+                    <div class="col-sm-6">
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                </div>
                 <!-- email -->
-                <label for="email" class="bold">Email: </label>
-                <input type="email" id="email" name="email" required>
-                <br />
+                <div class="form-group row">
+                    <label for="email" class="bold col-sm-6 col-form-label text-sm-right">Email: </label>
+                    <div class="col-sm-6">
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
                 <!-- phone -->
-                <label for="phone">Phone: </label>
-                <input type="tel" id="phone" name="phone">
-                <br />
+                <div class="form-group row">
+                    <label for="phone" class="col-sm-6 col-form-label text-sm-right">Phone: </label>
+                    <div class="col-sm-6">
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
                 <!-- reason for inquiry -->
-                <label for="reason">Reason for inquiry: </label>
-                <select id="reason" name="reason">
-                    <option value="catering" selected>Catering</option>
-                    <option value="private-party">Private Party</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="other">Other</option>
-                </select>
-                <br />
+                <div class="form-group row">
+                    <label for="reason" class="col-sm-6 col-form-label text-sm-right">Reason for inquiry: </label>
+                    <div class="col-sm-6">
+                        <select id="reason" name="reason" class="custom-select">
+                            <option value="catering" selected>Catering</option>
+                            <option value="private-party">Private Party</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
                 <!-- additional info textarea-->
-                <label for="add-info" class="bold">Additional Information:</label>
-                <textarea id="add-info" name="add-info" required rows="6" cols="30"></textarea>
+                <div class="form-group row">
+                    <label for="add-info" class="bold col-sm-6 col-form-label text-sm-right">Additional Information:</label>
+                    <div class="col-sm-6">
+                        <textarea class="form-control" id="add-info" name="add-info" required rows="6"></textarea>
+                    </div>
+                </div>
                 <!-- been to restaurant radio -->
-                <fieldset>
-                    <legend>Have you been to the restaurant?</legend>
-                    <input type="radio" value="no" name="restaurant" id="no">
-                    <label for="no">No</label>
-                    <input type="radio" value="yes" name="restaurant" id="yes">
-                    <label for="yes">Yes</label>
+                <fieldset class="row">
+                    <!-- <div class="col-sm-6"> -->
+                        <legend class=" col-form-label text-sm-right col-sm-6">Have you been to the restaurant?</legend>
+                    <!-- </div> -->
+                    <div class="col-sm-6">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" value="no" name="restaurant" id="no" class="form-check-input">
+                            <label for="no" class="form-check-label">No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" value="yes" name="restaurant" id="yes" class="form-check-input">
+                            <label for="yes" class="form-check-label">Yes</label>
+                        </div>
+                    </div>
                 </fieldset>
-                <br />
                 <!-- days to contact check boxes -->
                 <fieldset>
-                    <legend>Best days to contact you:</legend>
-                    <!-- Monday -->
-                    <input type="checkbox" value="m" name="days" id="m">
-                    <label for="m">M</label>
-                    <!-- Tuesday -->
-                    <input type="checkbox" value="t" name="days" id="t">
-                    <label for="t">T</label>
-                    <!-- Wednesday --> 
-                    <input type="checkbox" value="w" name="days" id="w">
-                    <label for="w">W</label>
-                    <!-- Thursday -->
-                    <input type="checkbox" value="th" name="days" id="th">
-                    <label for="th">Th</label>
-                    <!-- Friday -->
-                    <input type="checkbox" value="f" name="days" id="f">
-                    <label for="f">F</label>
+                    <div class="form-check-inline">
+                        <legend class="col-sm-6 col-form-label text-sm-right">Best days to contact you:</legend>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <!-- Monday -->
+                        <input type="checkbox" value="m" name="days" id="m" class="form-check-input">
+                        <label for="m" class="form-check-label">M</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <!-- Tuesday -->
+                        <input type="checkbox" value="t" name="days" id="t" class="form-check-input">
+                        <label for="t" class="form-check-label">T</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <!-- Wednesday -->
+                        <input type="checkbox" value="w" name="days" id="w" class="form-check-input">
+                        <label for="w" class="form-check-label">W</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <!-- Thursday -->
+                        <input type="checkbox" value="th" name="days" id="th" class="form-check-input">
+                        <label for="th" class="form-check-label">Th</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <!-- Friday -->
+                        <input type="checkbox" value="f" name="days" id="f" class="form-check-input">
+                        <label for="f" class="form-check-label">F</label>
+                    </div>
+                    </div>
                 </fieldset>
-                <br />
                 <!-- submit btn-->
-                <input type="submit" value="Send Request" name="submit">
+                <input type="submit" value="Send Request" name="submit" class="btn btn-success">
             </form>
         </section>
-        <footer>
+        <footer class="text-success">
             <hr />
             <address>246 Road Street Drive, Town in Country, MN 55642</address>
             <p>+1 (507) 246-1224</p>
         </footer>
         <hr />
     </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
