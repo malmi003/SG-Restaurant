@@ -10,15 +10,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
         crossorigin="anonymous">
     <!-- my css -->
     <link rel="stylesheet" type="text/css" media="screen" href="./restaurantStyles.css" />
+    <!-- my js -->
+    <script src="./restaurantJs.js"></script>
 </head>
 
 <body>
+    <noscript>
+        <p>Please enable JavaScript in your browser for better use of the website.</p>
+    </noscript>
+
     <main class="container">
         <header>
             <h2>Contact</h2>
@@ -26,7 +32,7 @@
             <div class="header-circle black-border"></div>
             <div class="header-circle black-border"></div>
             <hr />
-            <h1>Mike's Cereal Shack</h1>
+            <h1>Mike's Cereal Shack <i class="fas fa-utensil-spoon"></i></h1>
             <hr />
             <nav>
                 <ul class="nav nav-tabs">
@@ -37,9 +43,11 @@
             </nav>
             <hr />
         </header>
+
         <section id="contact-main">
+            <h2 class="display-5 mb-4 mt-4 text-success text-center">Contact Us</h2>
             <!-- start of form -->
-            <form action="submit.html" method="POST" class="col-md-10 m-auto text-center">
+            <form onsubmit="return false" class="col-md-10 m-auto">
                 <!-- name -->
                 <div class="form-group row">
                     <label for="name" class="bold col-sm-6 col-form-label text-sm-right">Name: </label>
@@ -63,9 +71,9 @@
                 </div>
                 <!-- reason for inquiry -->
                 <div class="form-group row">
-                    <label for="reason" class="col-sm-6 col-form-label text-sm-right">Reason for inquiry: </label>
+                    <label for="reason" class="col-sm-6 col-form-label text-sm-right bold">Reason for inquiry: </label>
                     <div class="col-sm-6">
-                        <select id="reason" name="reason" class="custom-select">
+                        <select id="reason" name="reason" class="custom-select" required>
                             <option value="catering" selected>Catering</option>
                             <option value="private-party">Private Party</option>
                             <option value="feedback">Feedback</option>
@@ -81,10 +89,10 @@
                     </div>
                 </div>
                 <!-- been to restaurant radio -->
-                <fieldset class="row">
-                    <!-- <div class="col-sm-6"> -->
-                        <legend class=" col-form-label text-sm-right col-sm-6">Have you been to the restaurant?</legend>
-                    <!-- </div> -->
+                <div class="form-group row">
+                    <legend class="col-form-label text-sm-right col-sm-6">
+                        Have you been to the restaurant?
+                    </legend>
                     <div class="col-sm-6">
                         <div class="form-check form-check-inline">
                             <input type="radio" value="no" name="restaurant" id="no" class="form-check-input">
@@ -95,41 +103,40 @@
                             <label for="yes" class="form-check-label">Yes</label>
                         </div>
                     </div>
-                </fieldset>
+                </div>
                 <!-- days to contact check boxes -->
-                <fieldset>
-                    <div class="form-check-inline">
-                        <legend class="col-sm-6 col-form-label text-sm-right">Best days to contact you:</legend>
+                <div class="form-group row">
+                    <legend class="col-form-label text-sm-right col-sm-6">Best days to contact you:</legend>
+                    <div class="col-sm-6">
+                        <div class="form-check form-check-inline">
+                            <!-- Monday -->
+                            <input type="checkbox" value="m" name="days" id="m" class="form-check-input">
+                            <label for="m" class="form-check-label">M</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <!-- Tuesday -->
+                            <input type="checkbox" value="t" name="days" id="t" class="form-check-input">
+                            <label for="t" class="form-check-label">T</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <!-- Wednesday -->
+                            <input type="checkbox" value="w" name="days" id="w" class="form-check-input">
+                            <label for="w" class="form-check-label">W</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <!-- Thursday -->
+                            <input type="checkbox" value="th" name="days" id="th" class="form-check-input">
+                            <label for="th" class="form-check-label">Th</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <!-- Friday -->
+                            <input type="checkbox" value="f" name="days" id="f" class="form-check-input">
+                            <label for="f" class="form-check-label">F</label>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <!-- Monday -->
-                        <input type="checkbox" value="m" name="days" id="m" class="form-check-input">
-                        <label for="m" class="form-check-label">M</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <!-- Tuesday -->
-                        <input type="checkbox" value="t" name="days" id="t" class="form-check-input">
-                        <label for="t" class="form-check-label">T</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <!-- Wednesday -->
-                        <input type="checkbox" value="w" name="days" id="w" class="form-check-input">
-                        <label for="w" class="form-check-label">W</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <!-- Thursday -->
-                        <input type="checkbox" value="th" name="days" id="th" class="form-check-input">
-                        <label for="th" class="form-check-label">Th</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <!-- Friday -->
-                        <input type="checkbox" value="f" name="days" id="f" class="form-check-input">
-                        <label for="f" class="form-check-label">F</label>
-                    </div>
-                    </div>
-                </fieldset>
+                </div>
                 <!-- submit btn-->
-                <input type="submit" value="Send Request" name="submit" class="btn btn-success">
+                <input type="submit" value="Submit" name="submit" class="btn btn-success btn-block" onclick="validate();">
             </form>
         </section>
         <footer class="text-success">

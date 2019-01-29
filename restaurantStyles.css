@@ -1,7 +1,8 @@
 /* apply header and footer styling here */
 /* ------------header & footer------------- */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'KoHo', sans-serif;
+
 }
 .jumbotron {
     /* Photo by Toa Heftiba on Unsplash */
@@ -49,13 +50,13 @@ header li {
     margin-bottom: 1.5em;
     list-style-type: none;
 }
-nav a:visited {
+a:visited {
     color:green;
 }
-nav a:hover{
+a:hover{
     font-weight: bold;
 }
-nav a:active{
+a:active{
    text-decoration: none; 
 }
 footer {
@@ -65,7 +66,13 @@ footer {
 footer address {
     font-style: normal;
 }
-
+.carousel img {
+    /* max-width:640px;
+    max-height:360px; */
+  }
+.carousel-caption {
+    background: rgba(40,167,69,.8);
+}
 #menu-main li {
     list-style-type: none;
 }
